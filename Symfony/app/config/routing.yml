@@ -1,0 +1,3 @@
+math_math:
+    resource: "@MathMathBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,18 @@
+marek_default:
+    pattern:  /
+    defaults: { _controller: MarekWitajBundle:Default:typical }
+
+marek_witaj_homepage:
+    pattern:  /hello
+    defaults: { _controller: MarekWitajBundle:Default:index }
+
+marek_witaj_question:
+    pattern:  /hello/question
+    defaults: { _controller: MarekWitajBundle:Default:question1 }
+
+Mlogin:
+    pattern:   /login
+    defaults: { _controller: MarekWitajBundle:Security:login }
+
+Mlogin_check:
+    pattern:   /login_check

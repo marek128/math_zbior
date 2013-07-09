@@ -1,0 +1,97 @@
+http://localhost:8890/matematyka
+
+PREFIX Ontology1350739352430: <http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#>
+
+//szukanie URI wszystkich zadan
+
+SELECT ?name WHERE
+{
+	_:a Ontology1350739352430:URIZadania ?name .
+	_:a rdf:type Ontology1350739352430:Zadanie
+}
+
+//szukanie zadan wraz z poziomami trudnosci
+
+SELECT ?poziom, ?name WHERE
+{
+	_:a Ontology1350739352430:PoziomTrudnosci ?poziom .
+	_:a Ontology1350739352430:URIZadania ?name .
+	_:a rdf:type Ontology1350739352430:Zadanie
+}
+
+
+//Szukanie wszystkich zadan
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Zadanie
+}
+
+
+//szukanie rozwiazan zadania z1
+
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Rozwiazanie .
+	Ontology1350739352430:z1 Ontology1350739352430:MaRozwiazanie ?name
+	
+}
+
+//zadania do ktorych potrzebne jest Mnozenie_pamieciowe_liczb_calkowitych
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Zadanie .
+	?name Ontology1350739352430:WaznaUmiejetnosc Ontology1350739352430:Mnozenie_pamieciowe_liczb_calkowitych
+}
+
+
+//zadania do ktorych potrzebne jest Dodawanie_pamieciowe_liczb_calkowitych
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Zadanie .
+	?name Ontology1350739352430:WaznaUmiejetnosc Ontology1350739352430:Dodawanie_pamieciowe_liczb_calkowitych
+}
+
+//Umiejetnosci podobne do Dodawanie_pamieciowe_liczb_calkowitych
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Umiejetnosci .
+	?name Ontology1350739352430:PodobnaUmiejetnosc Ontology1350739352430:Dodawanie_pamieciowe_liczb_calkowitych
+}
+
+SELECT ?name WHERE
+{
+	?name rdf:type Ontology1350739352430:Zadanie .
+	?name Ontology1350739352430:RownowazneZadaniu Ontology1350739352430:z1
+}
+
+SELECT ?name, ?trudnosc WHERE
+{
+	?name rdf:type Ontology1350739352430:Zadanie .
+Ontology1350739352430:z1 Ontology1350739352430:RownowazneZadaniu ?name .
+?name Ontology1350739352430:PoziomTrudnosci ?trudnosc
+	
+}
+
+
+
+//CURL
+
+
+curl -i -d "INSERT INTO <http://localhost:8890/DAV> { Ontology1350739352430:z26 rdf:type Ontology1350739352430:Zadanie . }" -H "Content-Type: application/sparql-query" http://192.168.1.101:8890/sparql
+
+curl -i -d "SELECT ?name WHERE { ?name rdf:type Ontology1350739352430:Zadanie }" -H "Content-Type: application/sparql-query" http://192.168.1.101:8890/sparql
+
+
+curl -i -d "?default-graph-uri=http://localhost:8890/DAV&query=INSERT INTO  <http://localhost:8890/DAV> { Ontology1350739352430:zabc rdf:type Ontology1350739352430:Zadanie . }" -u dba:dba -H "Content-Type: application/sparql" http://192.168.1.101:8890/sparql
+
+
+
+
+curl -i -d "?default-graph-uri=http://localhost:8890/DAV&query=SELECT ?name WHERE { ?name rdf:type Ontology1350739352430:Zadanie }&format=text-html" -H "Content-Type: application/sparql" http://192.168.1.101:8890/sparql
+
+
+
+
+curl -i -d "?default-graph-uri=http://localhost:8890/DAV&query=INSERT INTO  <http://localhost:8890/DAV> { Ontology1350739352430:zabc rdf:type Ontology1350739352430:Zadanie . }" -H "Content-Type: application/sparql" http://192.168.1.101:8890/sparql
+
+

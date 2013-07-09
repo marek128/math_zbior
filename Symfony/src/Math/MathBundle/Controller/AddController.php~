@@ -1,0 +1,17 @@
+<?php
+
+namespace Math\MathBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class AddController extends Controller
+{
+    public function indexTaskAction()
+    {
+        return $this->render('MathMathBundle:Add:findTaskIndex.html.php');
+    }
+    public function indexSubjectAction()
+    {
+        return $this->render('MathMathBundle:Add:findSubjectIndex.html.php');
+    }
+}

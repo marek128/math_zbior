@@ -1,0 +1,39 @@
+body {
+  background: #b2e1fa;
+}
+
+#main_menu {
+  width: 18%;
+  background: #a4c6d3;
+  float: left;
+}
+
+#main_menu a {
+  display: block;
+  background: #fae2ce;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  color: #343487;
+}
+
+#content {
+  width: 82%;
+  background: #c4d6e3;
+  float: left;
+}
+
+#head {
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  clear: both;
+  text-align: center;
+  background: #c4d6d3;
+}
+
+ul li {
+  list-style: none;
+}

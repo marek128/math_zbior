@@ -1,0 +1,7 @@
+parameters:
+#    math_math.example.class: Math\MathBundle\Example
+
+services:
+#    math_math.example:
+#        class: %math_math.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

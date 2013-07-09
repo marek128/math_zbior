@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1350739352430 "http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Ontology1350739352430="http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#JestZDzialu -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;JestZDzialu">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Dzial"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Zadanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#MaRozwiazanie -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;MaRozwiazanie">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Zadanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#PodobnaUmiejetnosc -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;PodobnaUmiejetnosc">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#PomozeRozwiazac -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;PomozeRozwiazac">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Zadanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#PrzydatneUmiejetnosci -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;PrzydatneUmiejetnosci">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Dzial"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#RownowazneZadaniu -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;RownowazneZadaniu">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Zadanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#WaznaUmiejetnosc -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1350739352430;WaznaUmiejetnosc">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+        <rdfs:domain rdf:resource="&Ontology1350739352430;Zadanie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#PoziomTrudnosci -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;PoziomTrudnosci">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1350739352430;PoziomTrudnosci"/>
+                <owl:someValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#URIRozwiazania -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;URIRozwiazania">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1350739352430;URIRozwiazania"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#URIZadania -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;URIZadania">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1350739352430;URIZadania"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Dzial -->
+
+    <owl:Class rdf:about="&Ontology1350739352430;Dzial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Rozwiazanie -->
+
+    <owl:Class rdf:about="&Ontology1350739352430;Rozwiazanie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Umiejetnosci -->
+
+    <owl:Class rdf:about="&Ontology1350739352430;Umiejetnosci"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Zadanie -->
+
+    <owl:Class rdf:about="&Ontology1350739352430;Zadanie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Dodawanie_pamieciowe_liczb_calkowitych -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Dodawanie_pamieciowe_liczb_calkowitych">
+        <rdf:type rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Dzialania_pamieciowe_na_liczbach_calkowitych -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Dzialania_pamieciowe_na_liczbach_calkowitych">
+        <rdf:type rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+        <PodobnaUmiejetnosc rdf:resource="&Ontology1350739352430;Dodawanie_pamieciowe_liczb_calkowitych"/>
+        <PodobnaUmiejetnosc rdf:resource="&Ontology1350739352430;Dzielenie_pamieciowe_liczb_calkowitych"/>
+        <PodobnaUmiejetnosc rdf:resource="&Ontology1350739352430;Mnozenie_pamieciowe_liczb_calkowitych"/>
+        <PodobnaUmiejetnosc rdf:resource="&Ontology1350739352430;Odejmowanie_pamieciowe_liczb_calkowitych"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Dzielenie_pamieciowe_liczb_calkowitych -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Dzielenie_pamieciowe_liczb_calkowitych">
+        <rdf:type rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Geometria -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Geometria">
+        <rdf:type rdf:resource="&Ontology1350739352430;Dzial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Liczby_calkowite -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Liczby_calkowite">
+        <rdf:type rdf:resource="&Ontology1350739352430;Dzial"/>
+        <PrzydatneUmiejetnosci rdf:resource="&Ontology1350739352430;Dzialania_pamieciowe_na_liczbach_calkowitych"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Liczby_naturalne -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Liczby_naturalne">
+        <rdf:type rdf:resource="&Ontology1350739352430;Dzial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Mnozenie_pamieciowe_liczb_calkowitych -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Mnozenie_pamieciowe_liczb_calkowitych">
+        <rdf:type rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Odejmowanie_pamieciowe_liczb_calkowitych -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Odejmowanie_pamieciowe_liczb_calkowitych">
+        <rdf:type rdf:resource="&Ontology1350739352430;Umiejetnosci"/>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Podstawowy -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Podstawowy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Sredni -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Sredni"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Wyzszy -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;Wyzszy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#r1 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;r1">
+        <rdf:type rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#r1a -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;r1a">
+        <rdf:type rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#r2 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;r2">
+        <rdf:type rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#r2a -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;r2a">
+        <rdf:type rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#z1 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;z1">
+        <rdf:type rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <PoziomTrudnosci rdf:datatype="&xsd;double">2.0</PoziomTrudnosci>
+        <URIZadania rdf:datatype="&xsd;anyURI">uri_zadania1.uri</URIZadania>
+        <WaznaUmiejetnosc rdf:resource="&Ontology1350739352430;Dodawanie_pamieciowe_liczb_calkowitych"/>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+        <MaRozwiazanie rdf:resource="&Ontology1350739352430;r1"/>
+        <RownowazneZadaniu rdf:resource="&Ontology1350739352430;z1a"/>
+        <RownowazneZadaniu rdf:resource="&Ontology1350739352430;z1b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#z1a -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;z1a">
+        <rdf:type rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <PoziomTrudnosci rdf:datatype="&xsd;double">2.1</PoziomTrudnosci>
+        <URIZadania rdf:datatype="&xsd;anyURI">uriZadania1a.uri</URIZadania>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#z1b -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;z1b">
+        <rdf:type rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <PoziomTrudnosci rdf:datatype="&xsd;double">2.15</PoziomTrudnosci>
+        <URIZadania rdf:datatype="&xsd;anyURI">uriZadaniaz1b.uri</URIZadania>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#z2 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;z2">
+        <rdf:type rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <PoziomTrudnosci rdf:datatype="&xsd;double">2.4</PoziomTrudnosci>
+        <URIZadania rdf:datatype="&xsd;anyURI">uriZadania2.uri</URIZadania>
+        <WaznaUmiejetnosc rdf:resource="&Ontology1350739352430;Dodawanie_pamieciowe_liczb_calkowitych"/>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+        <WaznaUmiejetnosc rdf:resource="&Ontology1350739352430;Mnozenie_pamieciowe_liczb_calkowitych"/>
+        <MaRozwiazanie rdf:resource="&Ontology1350739352430;r2"/>
+        <RownowazneZadaniu rdf:resource="&Ontology1350739352430;z2a"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#z2a -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1350739352430;z2a">
+        <rdf:type rdf:resource="&Ontology1350739352430;Zadanie"/>
+        <PoziomTrudnosci rdf:datatype="&xsd;double">2.2</PoziomTrudnosci>
+        <URIZadania rdf:datatype="&xsd;anyURI">zadanie2a.uri</URIZadania>
+        <JestZDzialu rdf:resource="&Ontology1350739352430;Liczby_calkowite"/>
+        <RownowazneZadaniu rdf:resource="&Ontology1350739352430;z2"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

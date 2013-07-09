@@ -1,0 +1,19 @@
+math_math_homepage:
+    pattern:  /math
+    defaults: { _controller: MathMathBundle:Default:index }
+
+math_find_task:
+    pattern:  /math/find/task
+    defaults: { _controller: MathMathBundle:Find:indexTask }
+
+math_add_task:
+    pattern:  /math/add/task
+    defaults: { _controller: MathMathBundle:Add:indexTask }
+
+math_find_subject:
+    pattern:  /math/find/subject
+    defaults: { _controller: MathMathBundle:Find:indexSubject }
+
+math_add_subject:
+    pattern:  /math/add/subject
+    defaults: { _controller: MathMathBundle:Add:indexSubject }
