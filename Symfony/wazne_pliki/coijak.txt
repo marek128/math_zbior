@@ -1,0 +1,11 @@
+mozna dodac zadanie
+mozna szukac zadania(dzial, poziom trudnosci)
+   wtedy sie wyswietli i podane sa dane:
+      dzial (mozna kliknac)
+      poziom trudnosci (nie mozna kliknac)
+      URIzadania
+      rozwiazanie(mozna kliknac)
+
+
+mozna dodac temat
+mozna szukac tematu
