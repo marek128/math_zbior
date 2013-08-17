@@ -18,26 +18,27 @@ class Query
   }
 }
 
-
 class QueryConfig
 {
   public $mHostUri;
   public $mGraphUri;
   public $mLogic;
   
-  public function __construct($pDefault = true)
+  public function __construct()
   {
-    if($pDefault == true)
-    {
-      $this->mHostUri = 'http://localhost:8890/sparql';
-      $this->mGraphUri = 'http://localhost:8890/DAV';
-    }
-    else
-    {
-      $this->mHostUri = null;
-      $this->mGraphUri = null;
-    }
+    $this->mHostUri = 'http://localhost:8890/sparql';
+    $this->mGraphUri = 'http://localhost:8890/DAV';
     $this->mLogic = null;
+  }
+
+  public function setHostUri($pHostUri)
+  {
+    $this->mHostUri = $pHostUri;
+  }
+
+  public function setGraphUri($pGraphUri)
+  {
+    $this->mGraphUri = $pGraphUri;
   }
 }
 ?>
