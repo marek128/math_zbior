@@ -114,9 +114,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Description -->
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Opis -->
 
-    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;Description"/>
+    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;Opis"/>
     
 
 
