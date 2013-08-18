@@ -114,6 +114,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#Description -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1350739352430;Description"/>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/9/Ontology1350739352430.owl#PoziomTrudnosci -->
 
     <owl:DatatypeProperty rdf:about="&Ontology1350739352430;PoziomTrudnosci">

@@ -3,6 +3,7 @@
 namespace Math\MathBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Math\MathBundle\Utils;
 
 
 class FindController extends Controller

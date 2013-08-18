@@ -9,3 +9,5 @@ class Database
     return "It's my name";
   }
 }
+
+?>
