@@ -1,0 +1,56 @@
+Aug 18 22:41:39 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 18 22:41:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 18 22:41:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 18 22:41:39 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 18 22:41:39 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Aug 18 22:41:39 symfony [info] {sfPHPView} Decorate content with "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 18 22:41:39 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 18 22:41:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 18 22:41:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 18 22:41:39 symfony [info] {sfWebDebugLogger} Configuration 81.12 ms (9)
+Aug 18 22:41:39 symfony [info] {sfWebDebugLogger} Factories 71.19 ms (1)
+Aug 18 22:41:39 symfony [info] {sfWebDebugLogger} Action "default/index" 0.10 ms (1)
+Aug 18 22:41:39 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 7.81 ms (1)
+Aug 18 22:41:39 symfony [info] {sfWebResponse} Send content (28863 o)
+Aug 18 22:47:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 18 22:47:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 18 22:47:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 18 22:47:26 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 18 22:47:26 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Aug 18 22:47:26 symfony [info] {sfPHPView} Decorate content with "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 18 22:47:26 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 18 22:47:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 18 22:47:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 18 22:47:26 symfony [info] {sfWebDebugLogger} Configuration 2.57 ms (9)
+Aug 18 22:47:26 symfony [info] {sfWebDebugLogger} Factories 81.58 ms (1)
+Aug 18 22:47:26 symfony [info] {sfWebDebugLogger} Action "default/index" 0.19 ms (1)
+Aug 18 22:47:26 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 15.86 ms (1)
+Aug 18 22:47:26 symfony [info] {sfWebResponse} Send content (28894 o)
+Aug 19 20:41:47 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 19 20:41:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 19 20:41:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 19 20:41:47 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 19 20:41:47 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Aug 19 20:41:47 symfony [info] {sfPHPView} Decorate content with "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 19 20:41:47 symfony [info] {sfPHPView} Render "/var/www/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 19 20:41:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 19 20:41:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 19 20:41:47 symfony [info] {sfWebDebugLogger} Configuration 4.55 ms (9)
+Aug 19 20:41:47 symfony [info] {sfWebDebugLogger} Factories 337.86 ms (1)
+Aug 19 20:41:47 symfony [info] {sfWebDebugLogger} Action "default/index" 0.19 ms (1)
+Aug 19 20:41:47 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 88.58 ms (1)
+Aug 19 20:41:48 symfony [info] {sfWebResponse} Send content (28493 o)
+Aug 19 20:53:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 19 20:53:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 19 20:53:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 19 20:53:07 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 19 20:53:07 symfony [info] {sfPHPView} Render "/var/www/test_gita/math_zbior/MathZbior/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Aug 19 20:53:07 symfony [info] {sfPHPView} Decorate content with "/var/www/test_gita/math_zbior/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 19 20:53:07 symfony [info] {sfPHPView} Render "/var/www/test_gita/math_zbior/MathZbior/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 19 20:53:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 19 20:53:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 19 20:53:07 symfony [info] {sfWebDebugLogger} Configuration 102.63 ms (9)
+Aug 19 20:53:07 symfony [info] {sfWebDebugLogger} Factories 70.45 ms (1)
+Aug 19 20:53:07 symfony [info] {sfWebDebugLogger} Action "default/index" 0.09 ms (1)
+Aug 19 20:53:07 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 7.88 ms (1)
+Aug 19 20:53:07 symfony [info] {sfWebResponse} Send content (30076 o)
