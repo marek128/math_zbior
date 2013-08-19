@@ -12,7 +12,7 @@ class FindController extends Controller
     public function indexTaskAction()
     {
         $request = Request::createFromGlobals();
-        var_dump($request);
+//         var_dump($request);
         $l_database = new Database();
         $l_text = $l_database->getYourName();
         return $this->render('MathMathBundle:Find:findTaskIndex.html.php', array(
