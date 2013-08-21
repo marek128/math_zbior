@@ -1,5 +1,6 @@
 body {
   background: #e2f1fa;
+  font-family: mono;
 }
 
 #main_menu {
@@ -8,19 +9,10 @@ body {
   float: left;
 }
 
-#main_menu a {
-  display: block;
-  background: #fae2ce;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 5px;
-  color: #343487;
-}
-
 #content {
-  width: 82%;
+  width: 100%;
   background: #c4d6e3;
-  float: left;
+  height: 20ex;
 }
 
 #head {
@@ -34,6 +26,26 @@ body {
   background: #c4d6d3;
 }
 
-ul li {
-  list-style: none;
+.caption {
+  display: block;
+  float: left;
+  padding-left: 1em;
+  width: 8em;
+}
+
+.login1 {
+  display: block;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#rejestracja {
+  margin-top: 2ex;
+  text-align: center;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #3476B5;
 }
