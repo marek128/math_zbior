@@ -6,7 +6,7 @@ default:
     content-type: text/html
 
   metas:
-    title:        Mat Zbiór
+    title:        Moja Pracka
     #description:  symfony project
     keywords:     matematyka, zadania
     language:     pl

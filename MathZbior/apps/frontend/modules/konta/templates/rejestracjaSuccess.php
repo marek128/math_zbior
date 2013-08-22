@@ -4,25 +4,41 @@
   </div>
   <div id="content">
 
-	<div id="div_input">
-	<form id="login" action="<?php echo url_for('konta/wykRejestracja')?>" method="post">
-	<div class="to_left">
-		<span class="caption2">Login:</span><br/>
-		<span class="caption2">Hasło:</span><br/>
-		<span class="caption2">Imię:</span><br/>
-		<span class="caption2">Nazwisko:</span><br/>
-	</div>
-	<div class="to_left">
-		<input type="text" name="login">
-		<input type="password" name="haslo">
-		<input type="text" name="imie">
-		<input type="text" name="nazwisko">
-	</div>
-<div>
-		<input type="submit" value="Rejestruj">
-		</div>
-	</form>
-	</div>
+  <div id="form_login">
+    <div style="margin-bottom: 10px;"><span class="bold_font">Rejestracja</span></div>
+    <form id="login" action="<?php echo url_for('konta/wykRejestruj')?>" method="post">
+
+      <div class="input_line">
+        <div class="caption">Login:</div>
+        <input class="input_box" type="text" name="login"/>
+      </div>
+
+      <div class="input_line">
+        <div class="caption">Hasło:</div>
+        <input class="input_box" type="password" name="haslo"/>
+      </div>
+
+      <div class="input_line">
+        <div class="caption">Imię:</div>
+        <input class="input_box" type="text" name="imie"/>
+      </div>
+
+      <div class="input_line">
+        <div class="caption">Nazwisko:</div>
+        <input class="input_box" type="text" name="nazwisko"/>
+      </div>
+
+      <input type="submit" value="Rejestruj" id="logowanie_submit">
+    </form>
   </div>
+
+  <div class="login_content">
+    <div style="height: 8ex;"></div>
+    <div id="rejestracja">
+      Tobardzo dobry portal.
+    </div>
+  </div>
+
+  </div>  <!--content-->
 </div>
 
