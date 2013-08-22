@@ -18,4 +18,9 @@ class kontaActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
   }
+
+  public function executeRejestracja(sfRequest $request)
+  {
+    $this->reg_error = $this->getUser()->getFlash('reg_error');
+  }
 }

@@ -1,14 +1,16 @@
 <div id="main">
   <div id="head">
-    <h2>Mat Zbiór - logowanie</h2>
+    <h2>Pracka - logowanie</h2>
   </div>
   <div id="content">
   <span class="login1">Zaloguj się:</span>
   <form id="login" action="<?php echo url_for('konta/logowanie')?>" method="post">
     <span class="caption">Login:</span>
-    <input type="text" name="login"><br>
+    <input type="text" name="login"><br/>
+    
     <span class="caption">Hasło:</span>
-    <input type="password" name="password">
+    <input type="password" name="haslo">
+    
     <input type="submit" value="Logowanie">
   </form>
 

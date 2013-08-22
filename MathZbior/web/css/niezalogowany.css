@@ -33,6 +33,17 @@ body {
   width: 8em;
 }
 
+.caption2 {
+  display: block;
+  float: left;
+  width: 8em;
+  padding: 3px;
+}
+
+input {
+  display: block;
+}
+
 .login1 {
   display: block;
   font-weight: bold;
@@ -48,4 +59,21 @@ body {
 a {
   text-decoration: none;
   color: #3476B5;
+}
+
+.div_centered {
+  text-align: center;
+}
+
+#div_input {
+margin-left: 30%;
+}
+
+.to_left {
+  float: left;
+  padding: 10px;
+}
+
+#login {
+	position: absolute;
 }
