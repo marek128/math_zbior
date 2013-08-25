@@ -38,7 +38,7 @@
     const BLAD_SELECT = 2;
     const BLAD_ZAPYTANIA = 3;
     const NAZWA_BAZY = 'localhost';
-    const UZYTKOWNIK_BAZY = 'root';
+    const UZYTKOWNIK_BAZY = 'user2';
     const HASLO_BAZY = '';
 
     private $link;
@@ -53,24 +53,24 @@
       $this->rozlacz();
     }
 
-    public function connect()
+    public function polacz()
     {
 
       if ($this->link !== false)
         return true;
 
-      $this->link = mysql_connect(Database::NAZWA_BAZY,
-                                  Database::UZYTKOWNIK_BAZY,
-                                  Database::HASLO_BAZY);
+      $this->link = mysql_connect(SQLBaza::NAZWA_BAZY,
+                                  SQLBaza::UZYTKOWNIK_BAZY,
+                                  SQLBaza::HASLO_BAZY);
       if ($this->link === false)
         throw new Exception("Błąd podczas łączenia z bazą danych: " . mysql_error(),
-                            Database::BLAD_POLACZENIA);
+                            SQLBaza::BLAD_POLACZENIA);
 
-      if (mysql_select_db('logger', $this->link) == false)
+      if (mysql_select_db('math', $this->link) == false)
         throw new Exception("Błąd podczas wyboru bazy danych: " . mysql_error(),
-                            Database::BLAD_SELECT);
+                            SQLBaza::BLAD_SELECT);
       
-      $this->query("set names 'utf8'");
+      $this->zapytanie("set names 'utf8'");
 
       return true;
     }
@@ -99,8 +99,8 @@
 
       $l_wynik = mysql_query($p_zapytanie, $this->link);
       if ($l_wynik === false)
-        throw new Exception("Błąd podczas wykonywania zapytania '$query_string'" .
-			    mysql_error(), Database::BLAD_ZAPYTANIA);
+        throw new Exception("Błąd podczas wykonywania zapytania '$zapytanie_string'" .
+			    mysql_error(), SQLBaza::BLAD_ZAPYTANIA);
 
       if ($l_wynik === true)
         return true;
@@ -110,7 +110,7 @@
 
     public function wstaw($p_tabela, $p_wartosci)
     {
-      $l_kolumny '( ';
+      $l_kolumny = '( ';
       $l_wartosci = '( ';
 
       $pierwszy = true;
@@ -137,7 +137,7 @@
 
       $l_zapytanie = "INSERT INTO $tabela $l_kolumny VALUES $l_wartosci;";
 
-      return $this->query($l_zapytanie);
+      return $this->zapytanie($l_zapytanie);
     }
 
     public function wybierz($p_tabela, $p_kolumny, $p_warunki = "")
@@ -155,11 +155,10 @@
       }
 
       $l_zapytanie = "SELECT $l_kolumny FROM $p_tabela $p_warunki;";
-      //print $query_string ."\n";
+      //print $zapytanie_string ."\n";
 
-      return $this->query($l_zapytanie);
+      return $this->zapytanie($l_zapytanie);
     }
-
 
     public function aktualizuj($p_tabela, $p_wartosci, $p_warunki = "")
     {
@@ -179,7 +178,7 @@
       }
 
       $l_zapytanie = "UPDATE $table SET $l_wartosci $p_warunki";
-      return $this->query($l_zapytanie);
+      return $this->zapytanie($l_zapytanie);
     }
 
     public static function import($p_zmienna)

@@ -6,7 +6,7 @@
 
   <div id="form_login">
     <div style="margin-bottom: 10px;"><span class="bold_font">Rejestracja</span></div>
-    <form id="login" action="<?php echo url_for('konta/wykRejestruj')?>" method="post">
+    <form id="login" action="<?php echo url_for('konta/wykRejestracja')?>" method="post">
 
       <div class="input_line">
         <div class="caption">Login:</div>
@@ -16,6 +16,11 @@
       <div class="input_line">
         <div class="caption">Hasło:</div>
         <input class="input_box" type="password" name="haslo"/>
+      </div>
+
+      <div class="input_line">
+        <div class="caption">E-mail:</div>
+        <input class="input_box" type="text" name="email"/>
       </div>
 
       <div class="input_line">
@@ -35,7 +40,7 @@
   <div class="login_content">
     <div style="height: 8ex;"></div>
     <div id="rejestracja">
-      Tobardzo dobry portal.
+      <?php print $reg_error ?>
     </div>
   </div>
 
