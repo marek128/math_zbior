@@ -65,6 +65,8 @@ class kontaActions extends sfActions
     }
     catch (Exception $e)
     {
+      $this->getUser()->setFlash('exception_error', $e->getMessage());
+      $this->redirect('bledy/index');
     }
   }
 
