@@ -6,11 +6,11 @@ default:
 
   javascripts:    []
 
-rejestracja:
+rejestracjaSuccess:
   metas:
     title: Pracka - rejestracja
 
-zarejestrowany:
+zarejestrowanySuccess:
   metas:
     title: Pracka - konto utworzone
 
