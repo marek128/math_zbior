@@ -135,7 +135,7 @@
       $l_kolumny .= ' )';
       $l_wartosci .= ' )';
 
-      $l_zapytanie = "INSERT INTO $tabela $l_kolumny VALUES $l_wartosci;";
+      $l_zapytanie = "INSERT INTO $p_tabela $l_kolumny VALUES $l_wartosci;";
 
       return $this->zapytanie($l_zapytanie);
     }

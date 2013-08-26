@@ -31,13 +31,13 @@ class kontaActions extends sfActions
     $login = $this->getRequestParameter('login');
     $l_dane->email = $this->getRequestParameter('email');
     $l_dane->haslo = $this->getRequestParameter('haslo');
-    $l_dane->first_name = $this->getRequestParameter('imie');
-    $l_dane->last_name = $this->getRequestParameter('nazwisko');
+    $l_dane->imie = $this->getRequestParameter('imie');
+    $l_dane->nazwisko = $this->getRequestParameter('nazwisko');
 
     $this->getUser()->setFlash('login', $login);
     $this->getUser()->setFlash('email', $l_dane->email);
-    $this->getUser()->setFlash('first_name', $l_dane->first_name);
-    $this->getUser()->setFlash('last_name', $l_dane->last_name);
+    $this->getUser()->setFlash('imie', $l_dane->imie);
+    $this->getUser()->setFlash('nazwisko', $l_dane->nazwisko);
 
     $reg_error = FunkcjeKonta::sprawdzPoprawnosc($login, $l_dane);
     if ("" != $reg_error)
@@ -51,17 +51,30 @@ class kontaActions extends sfActions
 
       if (FunkcjeKonta::zarejestruj($db, $login, $l_dane))
       {
+        $this->getUser()->setFlash('login', "$login");
+        $this->getUser()->setFlash('email', "$l_dane->email");
+        $this->getUser()->setFlash('imie', "$l_dane->imie");
+        $this->getUser()->setFlash('nazwisko', "$l_dane->nazwisko");
+        $this->redirect('konta/zarejestrowany');
       }
       else
       {
         $this->getUser()->setFlash('reg_error', "Konto o podanych danych już istnieje!");
-//         $this->redirect('konta/rejestracja');
+        $this->redirect('konta/rejestracja');
       }
     }
     catch (Exception $e)
     {
     }
   }
-  
-  
+
+  public function executeZarejestrowany(sfRequest $request)
+  {
+    $this->login =  $this->getUser()->getFlash('login');
+    $this->email =  $this->getUser()->getFlash('email');
+    $this->imie =  $this->getUser()->getFlash('imie');
+    $this->nazwisko =  $this->getUser()->getFlash('nazwisko');
+   
+  }
+
 }
