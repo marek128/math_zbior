@@ -5,3 +5,16 @@ default:
   stylesheets:    [niezalogowany.css]
 
   javascripts:    []
+
+rejestracja:
+  metas:
+    title: Pracka - rejestracja
+
+zarejestrowany:
+  metas:
+    title: Pracka - konto utworzone
+
+  has_layout:    true
+  layout:        layout_przekierowanie
+
+

@@ -12,7 +12,7 @@ body {
 #content {
   width: 100%;
   background: #c4d6e3;
-  height: 24ex;
+  height: 26ex;
 }
 
 #head {
@@ -28,7 +28,7 @@ body {
 
 #form_login {
   padding: 1em;
-  background: #A4B6E4;
+/*   background: #A4B6E4; */
   width: 20%;
   float: left;
 }
@@ -43,7 +43,7 @@ body {
 .input_box {
   display: block;
   height: 2.4ex;
-  width: 10em;
+  width: 11em;
 }
 
 .bold_font {
