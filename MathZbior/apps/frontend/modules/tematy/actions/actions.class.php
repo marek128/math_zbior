@@ -17,6 +17,12 @@ class tematyActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-//     $this->forward('default', 'module');
+    $login = $this->getUser()->getAttribute('login');
+    
+    if(NULL == $login)
+    {
+      $this->redirect('konta/index');
+    }
+    $this->login = $login;
   }
 }
