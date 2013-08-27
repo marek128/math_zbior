@@ -8,11 +8,11 @@ default:
 
 rejestracjaSuccess:
   metas:
-    title: Pracka - rejestracja
+    title: Mat Zbiór - rejestracja
 
 zarejestrowanySuccess:
   metas:
-    title: Pracka - konto utworzone
+    title: Mat Zbiór - konto utworzone
 
   has_layout:    true
   layout:        layout_przekierowanie

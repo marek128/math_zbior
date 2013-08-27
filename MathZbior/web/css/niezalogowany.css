@@ -12,7 +12,7 @@ body {
 #content {
   width: 100%;
   background: #c4d6e3;
-  height: 26ex;
+/*   height: 26ex; */
 }
 
 #head {
@@ -26,8 +26,8 @@ body {
   background: #c4d6d3;
 }
 
-#form_login {
-  padding: 1em;
+#lewa_kolumna {
+  padding: 1%;
   background: #A4B6E4;
   width: 20%;
   float: left;
@@ -46,11 +46,7 @@ body {
   width: 11em;
 }
 
-.bold_font {
-  font-weight: bold;
-}
-
-#rejestracja {
+#komunikat {
   text-align: center;
   font-weight: bold;
 }
@@ -60,22 +56,14 @@ a {
   color: #3476B5;
 }
 
-.div_centered {
-  text-align: center;
-}
-
-#div_input {
-margin-left: 30%;
-}
-
-.to_left {
-  float: left;
-  padding: 10px;
-}
 
 #logowanie_submit {
   margin-top: 1ex;
 }
 
-.login_content {
+#prawa_kolumna {
+  padding-top: 2ex;
+  float:left;
+  background: #c4c5e3;
+  width: 78%;
 }

@@ -4,7 +4,7 @@
   </div>
   <div id="content">
 
-  <div id="form_login">
+  <div id="lewa_kolumna">
     <div style="margin-bottom: 10px;"><span class="bold_font">Rejestracja</span></div>
 
       <div class="input_line">
@@ -25,9 +25,9 @@
 
   </div>
 
-  <div class="login_content">
+  <div id="prawa_kolumna">
     <div style="height: 8ex;"></div>
-    <div id="rejestracja">
+    <div id="komunikat">
       Zostałeś zarejestrowany.
     </div>
   </div>

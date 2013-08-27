@@ -1,10 +1,10 @@
 <div id="main">
   <div id="head">
-    <h2>Pracka - logowanie</h2>
+    <h2>Mat Zbiór - logowanie</h2>
   </div>
   <div id="content">
 
-  <div id="form_login">
+  <div id="lewa_kolumna">
     <div style="margin-bottom: 10px;"><span class="bold_font">Zaloguj się</span></div>
     <form id="login" action="<?php echo url_for('konta/wykLogowanie')?>" method="post">
 
@@ -22,9 +22,9 @@
     </form>
   </div>
   
-  <div class="login_content">
-    <div style="height: 8ex;"></div>
-    <div id="rejestracja">
+  <div id="prawa_kolumna">
+<!--     <div style="height: 8ex;"></div> -->
+    <div id="komunikat">
       <?php print $logowanie_error; print "<br/><br/>" ?>
       Jeśli nie posiadasz jeszcze konta kliknij link poniżej.<br/><br/>
       <a href="<?php echo url_for('konta/rejestracja')?>">Rejestracja</a>

@@ -22,7 +22,6 @@
    }
    catch (Exception $e)
    {
-    print $e;
     return FALSE;
    }
 
@@ -50,7 +49,6 @@
 
   public static function zarejestruj($db, $login, $dane)
   {
-   print ("zarehdkh");
    $login = $db->import($login);
 
    $hash = sha1($dane->haslo);

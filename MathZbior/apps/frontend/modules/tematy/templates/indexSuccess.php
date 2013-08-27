@@ -1,6 +1,6 @@
 <div id="main">
   <div id="head">
-    <h2>Pracka - tematy</h2>
+    <h2>Mat Zbiór - tematy</h2>
   </div>
   <div id="content">
   <?php print $login ?>

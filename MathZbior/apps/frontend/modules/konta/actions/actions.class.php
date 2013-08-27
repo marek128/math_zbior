@@ -18,16 +18,46 @@ class kontaActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->login = "";
+
     $this->logowanie_error = "";
     if($this->getUser()->hasAttribute('login'))
       $this->login = $this->getUser()->getAttribute('login');
+
+    if($this->getUser()->hasAttribute('email'))
+      $this->email = $this->getUser()->getAttribute('email');
+
+    if($this->getUser()->hasAttribute('imie'))
+      $this->imie = $this->getUser()->getAttribute('imie');
+
+    if($this->getUser()->hasAttribute('nazwisko'))
+      $this->nazwisko = $this->getUser()->getAttribute('nazwisko');
+
     if($this->getUser()->hasFlash('logowanie_error'))
       $this->logowanie_error = $this->getUser()->getFlash('logowanie_error');
   }
 
   public function executeRejestracja(sfRequest $request)
   {
-    $this->reg_error = $this->getUser()->getFlash('reg_error');
+    $this->reg_error = "";
+    $this->login = "";
+    $this->email = "";
+    $this->imie = "";
+    $this->nazwisko = "";
+
+    if($this->getUser()->hasFlash('reg_error'))
+      $this->reg_error = $this->getUser()->getFlash('reg_error');
+
+    if($this->getUser()->hasAttribute('login'))
+      $this->login = $this->getUser()->getAttribute('login');
+
+    if($this->getUser()->hasAttribute('email'))
+      $this->email = $this->getUser()->getAttribute('email');
+
+    if($this->getUser()->hasAttribute('imie'))
+      $this->imie = $this->getUser()->getAttribute('imie');
+
+    if($this->getUser()->hasAttribute('nazwisko'))
+      $this->nazwisko = $this->getUser()->getAttribute('nazwisko');
   }
   
   public function executeWykRejestracja(sfRequest $request)
@@ -40,10 +70,10 @@ class kontaActions extends sfActions
     $l_dane->imie = $this->getRequestParameter('imie');
     $l_dane->nazwisko = $this->getRequestParameter('nazwisko');
 
-    $this->getUser()->setFlash('login', $login);
-    $this->getUser()->setFlash('email', $l_dane->email);
-    $this->getUser()->setFlash('imie', $l_dane->imie);
-    $this->getUser()->setFlash('nazwisko', $l_dane->nazwisko);
+    $this->getUser()->setAttribute('login', $login);
+    $this->getUser()->setAttribute('email', $l_dane->email);
+    $this->getUser()->setAttribute('imie', $l_dane->imie);
+    $this->getUser()->setAttribute('nazwisko', $l_dane->nazwisko);
 
     $reg_error = FunkcjeKonta::sprawdzPoprawnosc($login, $l_dane);
     if ("" != $reg_error)
@@ -51,16 +81,13 @@ class kontaActions extends sfActions
       $this->getUser()->setFlash('reg_error', $reg_error);
       $this->redirect('konta/rejestracja');
     }
+
     try
     {
       $db = new SQLBaza();
 
       if (FunkcjeKonta::zarejestruj($db, $login, $l_dane))
       {
-        $this->getUser()->setFlash('login', "$login");
-        $this->getUser()->setFlash('email', "$l_dane->email");
-        $this->getUser()->setFlash('imie', "$l_dane->imie");
-        $this->getUser()->setFlash('nazwisko', "$l_dane->nazwisko");
         $this->redirect('konta/zarejestrowany');
       }
       else
@@ -78,10 +105,10 @@ class kontaActions extends sfActions
 
   public function executeZarejestrowany(sfRequest $request)
   {
-    $this->login =  $this->getUser()->getFlash('login');
-    $this->email =  $this->getUser()->getFlash('email');
-    $this->imie =  $this->getUser()->getFlash('imie');
-    $this->nazwisko =  $this->getUser()->getFlash('nazwisko');
+    $this->login =  $this->getUser()->getAttribute('login');
+    $this->email =  $this->getUser()->getAttribute('email');
+    $this->imie =  $this->getUser()->getAttribute('imie');
+    $this->nazwisko =  $this->getUser()->getAttribute('nazwisko');
    
   }
   
@@ -108,7 +135,6 @@ class kontaActions extends sfActions
         $this->getUser()->setAuthenticated(true);
         $this->getUser()->setAttribute('login', $login);
 
-        
         $this->redirect('tematy/index');
       }
     }

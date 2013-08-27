@@ -1,16 +1,16 @@
 <div id="main">
   <div id="head">
-    <h2>Pracka - rejestracja</h2>
+    <h2>Mat Zbiór - rejestracja</h2>
   </div>
   <div id="content">
 
-  <div id="form_login">
-    <div style="margin-bottom: 10px;"><span class="bold_font">Rejestracja</span></div>
+  <div id="lewa_kolumna">
+    <div style="margin-bottom: 10px;"><span style="font-weight: bold;">Rejestracja</span></div>
     <form id="login" action="<?php echo url_for('konta/wykRejestracja')?>" method="post">
 
       <div class="input_line">
         <div class="caption">Login:</div>
-        <input class="input_box" type="text" name="login"/>
+        <input class="input_box" type="text" name="login" value="<?php print $login; ?>"/>
       </div>
 
       <div class="input_line">
@@ -20,26 +20,26 @@
 
       <div class="input_line">
         <div class="caption">E-mail:</div>
-        <input class="input_box" type="text" name="email"/>
+        <input class="input_box" type="text" name="email" value="<?php print $email; ?>"/>
       </div>
 
       <div class="input_line">
         <div class="caption">Imię:</div>
-        <input class="input_box" type="text" name="imie"/>
+        <input class="input_box" type="text" name="imie" value="<?php print $imie; ?>"/>
       </div>
 
       <div class="input_line">
         <div class="caption">Nazwisko:</div>
-        <input class="input_box" type="text" name="nazwisko"/>
+        <input class="input_box" type="text" name="nazwisko" value="<?php print $nazwisko; ?>"/>
       </div>
 
       <input type="submit" value="Rejestruj" id="logowanie_submit">
     </form>
   </div>
 
-  <div class="login_content">
+  <div id="prawa_kolumna">
     <div style="height: 8ex;"></div>
-    <div id="rejestracja">
+    <div id="komunikat">
       <?php print $reg_error ?>
     </div>
   </div>

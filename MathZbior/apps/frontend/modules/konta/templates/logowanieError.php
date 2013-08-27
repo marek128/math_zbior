@@ -4,7 +4,7 @@
   </div>
   <div id="content">
 
-  <div id="form_login">
+  <div id="lewa_kolumna">
     <div style="margin-bottom: 10px;"><span class="bold_font">Rejestracja</span></div>
     <form id="login" action="<?php echo url_for('konta/wykRejestracja')?>" method="post">
 
@@ -37,7 +37,7 @@
     </form>
   </div>
 
-  <div class="login_content">
+  <div id="prawa_kolumna">
     <div style="height: 8ex;"></div>
     <div id="rejestracja">
       <?php print $reg_error ?>
