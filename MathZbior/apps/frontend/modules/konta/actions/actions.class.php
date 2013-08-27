@@ -17,6 +17,12 @@ class kontaActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->login = "";
+    $this->logowanie_error = "";
+    if($this->getUser()->hasAttribute('login'))
+      $this->login = $this->getUser()->getAttribute('login');
+    if($this->getUser()->hasFlash('logowanie_error'))
+      $this->logowanie_error = $this->getUser()->getFlash('logowanie_error');
   }
 
   public function executeRejestracja(sfRequest $request)
@@ -92,13 +98,17 @@ class kontaActions extends sfActions
       if (FALSE == $status)
       {
         $this->getUser()->getAttributeHolder()->clear();
-        return sfView::ERROR;
+        $this->getUser()->setAttribute('login', $login);
+        $this->getUser()->setFlash('logowanie_error', 'Niepoprawne dane');
+
+        $this->redirect('konta/index');
       }
       else
       {
         $this->getUser()->setAuthenticated(true);
         $this->getUser()->setAttribute('login', $login);
 
+        
         $this->redirect('tematy/index');
       }
     }

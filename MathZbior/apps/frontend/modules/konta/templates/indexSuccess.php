@@ -10,7 +10,7 @@
 
       <div class="input_line">
         <div class="caption">Login:</div>
-        <input class="input_box" type="text" name="login"/>
+        <input class="input_box" type="text" name="login" value="<?php print $login; ?>"/>
       </div>
 
       <div class="input_line">
@@ -25,6 +25,7 @@
   <div class="login_content">
     <div style="height: 8ex;"></div>
     <div id="rejestracja">
+      <?php print $logowanie_error; print "<br/><br/>" ?>
       Jeśli nie posiadasz jeszcze konta kliknij link poniżej.<br/><br/>
       <a href="<?php echo url_for('konta/rejestracja')?>">Rejestracja</a>
     </div>

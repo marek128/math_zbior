@@ -14,6 +14,8 @@ class bledyActions extends sfActions
   * Executes index action
   *
   * @param sfRequest $request A request object
+  *
+  * To sluzy do wyswietlania informacji zawartch w exceptionach.
   */
   public function executeIndex(sfWebRequest $request)
   {
