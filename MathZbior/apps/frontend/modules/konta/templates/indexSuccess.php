@@ -6,7 +6,7 @@
 
   <div id="form_login">
     <div style="margin-bottom: 10px;"><span class="bold_font">Zaloguj się</span></div>
-    <form id="login" action="<?php echo url_for('konta/logowanie')?>" method="post">
+    <form id="login" action="<?php echo url_for('konta/wykLogowanie')?>" method="post">
 
       <div class="input_line">
         <div class="caption">Login:</div>

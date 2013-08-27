@@ -78,5 +78,35 @@ class kontaActions extends sfActions
     $this->nazwisko =  $this->getUser()->getFlash('nazwisko');
    
   }
+  
+  public function executeWykLogowanie(sfRequest $request)
+  {
+    $login = $this->getRequestParameter('login');
+    $haslo = $this->getRequestParameter('haslo');
+
+    try
+    {
+      $db = new SQLBaza();
+      $status = FunkcjeKonta::sprawdzPrzyLogowaniu($db, $login, $haslo);
+
+      if (FALSE == $status)
+      {
+        $this->getUser()->getAttributeHolder()->clear();
+        return sfView::ERROR;
+      }
+      else
+      {
+        $this->getUser()->setAuthenticated(true);
+        $this->getUser()->setAttribute('login', $login);
+
+        $this->redirect('tematy/index');
+      }
+    }
+    catch (Exception $e)
+    {
+      $this->getUser()->setFlash('exception_error', $e->getMessage());
+      $this->redirect('bledy/index');
+    }
+  }
 
 }
