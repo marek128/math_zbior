@@ -18,8 +18,8 @@ class kontaActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->login = "";
-
     $this->logowanie_error = "";
+
     if($this->getUser()->hasAttribute('login'))
       $this->login = $this->getUser()->getAttribute('login');
 

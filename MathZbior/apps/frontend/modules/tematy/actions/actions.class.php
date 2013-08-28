@@ -17,12 +17,12 @@ class tematyActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $login = $this->getUser()->getAttribute('login');
+    $authenticated = $this->getUser()->isAuthenticated();
     
-    if(NULL == $login)
+    if(!$authenticated)
     {
       $this->redirect('konta/index');
     }
-    $this->login = $login;
+    $this->login = $this->getUser()->getAttribute('login');
   }
 }

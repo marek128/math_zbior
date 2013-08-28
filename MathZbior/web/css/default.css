@@ -71,3 +71,8 @@ a {
 .bold_font {
   font-weight: bold;
 }
+
+#tresc {
+  padding-left: 10px;
+  padding-right: 10px;
+}
