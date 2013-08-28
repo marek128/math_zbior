@@ -1,7 +1,0 @@
-math_math:
-    resource: "@MathMathBundle/Resources/config/routing.yml"
-    prefix:   /
-
-marek_witaj:
-    resource: "@MarekWitajBundle/Resources/config/routing.yml"
-    prefix:   /

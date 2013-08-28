@@ -67,3 +67,7 @@ a {
   background: #c4c5e3;
   width: 78%;
 }
+
+.bold_font {
+  font-weight: bold;
+}
