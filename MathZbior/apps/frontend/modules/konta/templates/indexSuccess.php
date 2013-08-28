@@ -23,11 +23,13 @@
   </div>
   
   <div id="prawa_kolumna">
-<!--     <div style="height: 8ex;"></div> -->
     <div id="komunikat">
-      <?php print $logowanie_error; print "<br/><br/>" ?>
+      <?php
+        if ("" != $logowanie_error)
+          print $logowanie_error . "<br/><br/>"
+      ?>
       Jeśli nie posiadasz jeszcze konta kliknij link poniżej.<br/><br/>
-      <a href="<?php echo url_for('konta/rejestracja')?>">Rejestracja</a>
+      <a href="<?php echo url_for('konta/rejestracja')?>">Rejestracja</a><br/><br/>
     </div>
   </div>
 
