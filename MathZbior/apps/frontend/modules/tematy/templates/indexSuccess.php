@@ -6,7 +6,7 @@
 
 
   <div id="lewa_kolumna">
-    menu
+    <a href="<?php echo url_for('konta/wykWylogowanie')?>">Wyloguj</a>
   </div>
 
   <div id="prawa_kolumna">
@@ -14,16 +14,6 @@
       <?php print $login ?>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
 
   </div>
 </div>

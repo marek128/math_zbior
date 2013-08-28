@@ -38,9 +38,8 @@
   </div>
 
   <div id="prawa_kolumna">
-    <div style="height: 8ex;"></div>
     <div id="komunikat">
-      <?php print $reg_error ?>
+      <?php print $reg_error ?><br/><br/>
     </div>
   </div>
 

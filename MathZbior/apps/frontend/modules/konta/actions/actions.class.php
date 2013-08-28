@@ -145,4 +145,11 @@ class kontaActions extends sfActions
     }
   }
 
+  public function executeWykWylogowanie(sfRequest $request)
+  {
+    $this->getUser()->getAttributeHolder()->clear();
+    $this->getUser()->setAuthenticated(false);
+
+    $this->redirect('konta/index');
+  }
 }
