@@ -2,10 +2,10 @@
 
 class ZapytanieSPARQL
 {
-  public function getQuery(QueryConfig $pConfig)
+  public function zapytanie(KonfiguracjaZapytania $pKonfig)
   {
-    return $pConfig->mHostUri . '?default-graph-uri=' .
-           Query::queryEncode($pConfig->mGraphUri . '&query=' . $pConfig->mLogic);
+    return $pKonfig->mHostUri . '?default-graph-uri=' .
+           ZapytanieSPARQL::zakoduj($pKonfig->mGrafUri . '&query=' . $pKonfig->mLogika);
   }
   
   private static function zakoduj($pInput)
