@@ -4,13 +4,13 @@ body {
 }
 
 #main_menu {
-  width: 18%;
+/*  width: 18%; */
   background: #a4c6d3;
   float: left;
 }
 
 #content {
-  width: 1264px;
+  width: 100%;
   background: #c4d6e3;
 /*   height: 26ex; */
 }
