@@ -8,7 +8,7 @@ $lQueryConfig = new KonfiguracjaZapytania();
 $lHost = 'localhost';
 
 $lQueryConfig->ustawHostUri('http://' . $lHost . ':8890/sparql');
-$lQueryConfig->ustawHostUri('http://' . 'localhost' . ':8890/DAV');
+$lQueryConfig->ustawGrafUri('http://' . 'localhost' . ':8890/DAV');
 $lQueryConfig->mLogika = $lLogic;
 
 $lQuery = new ZapytanieSPARQL();
