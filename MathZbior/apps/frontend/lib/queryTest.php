@@ -2,6 +2,8 @@
 
 include_once('./BazaWiedzy.php');
 
+function test1()
+{
 $lLogic = 'SELECT ?name WHERE { ?name rdf:type Ontology1350739352430:Zadanie . ?name Ontology1350739352430:WaznaUmiejetnosc Ontology1350739352430:Dodawanie_pamieciowe_liczb_calkowitych }&format=text/html&timeout=0&debug=on';
 
 $lQueryConfig = new KonfiguracjaZapytania();
@@ -26,6 +28,13 @@ catch(Exception $e)
 {
   echo 'Zlapany wyjatek: ' . $e->getMessage() . "\n";
 }
+}
 
+function test2()
+{
+  $lBaza = new BazaWiedzy();
+  $lBaza->pobierzTematy();
+}
 
+test2();
 ?>
