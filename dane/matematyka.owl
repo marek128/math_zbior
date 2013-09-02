@@ -300,6 +300,7 @@
 
     <owl:NamedIndividual rdf:about="&Ontology1350739352430;r1">
         <rdf:type rdf:resource="&Ontology1350739352430;Rozwiazanie"/>
+        <Opis>Łatwe zadanie na dodawanie</Opis>
     </owl:NamedIndividual>
     
 
