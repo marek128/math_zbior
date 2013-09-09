@@ -2,6 +2,7 @@
 
 include_once('./ZapytanieSPARQL.php');
 include_once('./Prefiksy.php');
+include_once('./Model.php');
 
 class BazaWiedzy
 {
@@ -35,17 +36,24 @@ class BazaWiedzy
     
     $lZapytanieTekst = $lZapytanieObiekt->zapytanie($gKonfig);
 //     print $lZapytanieTekst;
-    
+    $tematy = array();
     try
     {
       $rezultat = $this->zapytanie($lZapytanieTekst);
       $linie = array();
-      $linie = explode("tt", $rezultat);
+      $linie = explode("\n", $rezultat);
       foreach($linie as $linia)
       {
-         print "Oto linia: " . $linia;
+         if(preg_match("/".$gPrefiksModelu."/", $linia))
+         {
+           $tokeny = preg_split("/#/", $linia);
+//            print($tokeny[1] . "\n");
+           $tokeny2 = preg_split("/</", $tokeny[1]);
+           print($tokeny2[0] . "\n");
+           $tematy[] = new Temat($tokeny2[0]);
+         }
       }
-      
+      return $tematy;
     }
     catch(Exception $e)
     {

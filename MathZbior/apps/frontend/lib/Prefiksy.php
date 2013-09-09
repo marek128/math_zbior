@@ -3,7 +3,7 @@
 include_once('ZapytanieSPARQL.php');
 
 $gPrefiksModelu = "Ontology1350739352430";
-$gHost = '192.168.1.102';
+$gHost = 'localhost';
 $gGraf = 'localhost';
 
 $gKonfig = new KonfiguracjaZapytania();

@@ -33,7 +33,12 @@ catch(Exception $e)
 function test2()
 {
   $lBaza = new BazaWiedzy();
-  $lBaza->pobierzTematy();
+
+  $tablica = $lBaza->pobierzTematy();
+  foreach($tablica as $temat)
+  {
+    print ($temat->nazwa . "\n");
+  }
 }
 
 test2();
